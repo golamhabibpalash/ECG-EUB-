@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CMS.exe" size="552952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CMS.exe" size="553976">
       <assemblyIdentity name="CMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gSX3+N4aD+0ALzT9AHXVShnn+XI0gCEfcJyDW6V2sE4=</dsig:DigestValue>
+        <dsig:DigestValue>wjAEtAAfGDaJD01KzuPG17P1YgSy21fdiwc0NgUA6dE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -13,6 +13,8 @@ namespace CMS
 {
     public partial class MainForm : Form
     {
+        
+
         static string constring = ConfigurationManager.ConnectionStrings["CMS.Properties.Settings.Setting"].ConnectionString;
         SqlConnection con = new SqlConnection(constring);
 
@@ -23,7 +25,7 @@ namespace CMS
         int movY;
         DateTime startingTime;
         DateTime endingTime;
-        int totalTime;
+
 
         List<int> rData = new List<int>();
         List<int> pData = new List<int>();
@@ -62,7 +64,17 @@ namespace CMS
             startingTime = DateTime.Now;
             try
             {
-                myport.Open();
+                if (myport.IsOpen)
+                {
+                    MessageBox.Show("Application is already running");
+                }
+                else
+                {
+                    
+                    myport.Open();
+                }
+                
+                
             }
             catch (Exception ex)
             {
@@ -234,16 +246,20 @@ namespace CMS
         {
             try
             {
-
                 string pathfile = @"C:\Users\GH Palash\Desktop\Data\";
                 string filename = "GHPalash1.txt";
                 File.WriteAllText(pathfile + filename, dataShowTextBox.Text);
                 MessageBox.Show("Data has been Saved to " + pathfile, "Save file");
+
+                dataGridView.Rows.Add(0, pTextBox.Text, qTextBox.Text, rTextBox.Text, sTextBox.Text);
             }
+
             catch (Exception exception3)
             {
                 MessageBox.Show(exception3.Message, "Error");
             }
         }
+
+
     }
 }
